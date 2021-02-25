@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka-load-balancer
+spec:
+  type: LoadBalancer
+    #  externalIPs:
+    #  - 192.168.64.5
+  selector:
+    app: kafka
+  ports:
+  - protocol: TCP
+    port: 9093
+    targetPort: 9093
+    name: kafka
+

@@ -1,0 +1,8 @@
+syntax = "proto3";
+package cz.o2.proxima.parquet.model.proto;
+option java_outer_classname = "Location";
+
+message LocationSpec {
+  double latitude = 1;
+  double longitude = 2;
+}
